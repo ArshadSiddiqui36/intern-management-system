@@ -1,0 +1,94 @@
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+<div class="container_section" >
+  <div class="container" >
+    <div class="card" *ngFor="let i of data">
+      <div class="card-header">
+        <!-- <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" /> -->
+        <div class="user">
+          <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+          <div class="user-info">
+            <h4>{{i.name}}</h4>
+            <h6>{{i.designation}}</h6>
+            <!-- <small>2h ago</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="list">
+          <li>
+            <div class="data">
+              <i class="fal fa-user fa-2x"></i>
+                <div class="info">
+                <label for=""> Employee Id</label>
+              <div>
+                <small>11804718</small>
+              </div>
+                <!-- <small>2h ago</small> -->
+              </div>
+            </div>
+          </li>
+            <li>
+              <div class="data">
+                <i class="fal fa-phone fa-2x"></i>
+                  <div class="info">
+                  <label for=""> Phone</label>
+                <div>
+                  <small>{{i.phone}}</small>
+                </div>
+                  <!-- <small>2h ago</small> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="data">
+                <i class="fal fa-envelope-square fa-2x"></i>
+                  <div class="info">
+                  <label for=""> Email</label>
+                <div>
+                  <small>{{i.email}}</small>
+                </div>
+                  <!-- <small>2h ago</small> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="data">
+                <i class="fal fa-map-marker fa-2x"></i>
+                  <div class="info">
+                  <label for="">  Address</label>
+                <div>
+                  <small>{{i.address}}</small>
+                </div>
+                  <!-- <small>2h ago</small> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="data">
+                <i class="fal fa-user-tag fa-2x"></i>
+                  <div class="info">
+                  <label for=""> Role</label>
+                <div>
+                  <small>Intern</small>
+                </div>
+                  <!-- <small>2h ago</small> -->
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+</div>
+
+  </div>
+</div>

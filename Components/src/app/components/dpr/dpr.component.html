@@ -1,0 +1,127 @@
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tabbable-panel">
+        <div class="tabbable-line">
+          <ul class="nav nav-tabs">
+            <li class="active">
+              <a href="#writeDpr" data-toggle='tab'>Write Dpr </a>
+            </li>
+            <li>
+              <a href="#viewDpr" data-toggle='tab'>View Dpr</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="writeDpr">
+              <div class="container course_container">
+              <div class="form_wrapper">
+                <div class="form_container">
+                  <div class="title_container">
+                    <h1>Daily Progress Report</h1>
+                    <div class="date time">
+                      <p> {{dprDate}} </p>
+                    </div>
+
+                  </div>
+                  <div class="row clearfix">
+                    <div class="">
+                      <form action="" #userForm3='ngForm' (ngSubmit)="onSubmit(userForm3.value)">
+                        <textarea class="textArea"ngModel name="message" rows="10" cols="44"
+                          style="background-color: rgb(197, 245, 245);font-size: 20px; padding: 0%;margin: 0;">
+                        </textarea>
+
+                        <br><br>
+                        <input class="button" type="submit" value="Submit" />
+                      </form>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="viewDpr">
+              <div class="container course_container">
+                <!-- <div class="container"> -->
+                  <div class="dpr_container">
+                    <h1><b>Daily Progress Report</b></h1>
+                    <br>
+                    <div class="dpr_view " #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+                      <div *ngFor="let k of index">
+                        <div class="dpr_date">
+                          <h5>{{changeDate(k[0])}}</h5>
+                        </div>
+
+                        <table>
+                          <thead>
+                          </thead>
+
+                          <tbody *ngFor="let j of k[1]">
+                            <tr>
+                              <td class="col_profile">
+                                <img src="../../../assets/avatar.png" alt="user_avatar" alt="userProfile" />
+                              </td>
+                              <td class="col_name_time">
+                                <span class="user_name">{{j.name}}</span>
+                                <span class="dpr_time">{{changeTime(j.date)}}</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="col_dpr_btm"></td>
+                              <td class="col_dpr col_dpr_btm">
+                                {{j.dpr}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                      </div>
+
+                      <!-- Loop function end here -->
+
+
+                    </div>
+                  </div>
+                </div>
+              <!-- </div> -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

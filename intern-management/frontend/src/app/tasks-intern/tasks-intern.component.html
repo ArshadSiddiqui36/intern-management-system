@@ -1,0 +1,107 @@
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<form #userForm4="ngForm" (ngSubmit)="onSubmit(userForm4.value)">
+<div class="container">
+  <div class="form_wrapper">
+    <h3>TASKS</h3>
+    <p>if we click the checkbox- it means the task is done by the intern and status should be converted to completed or else it should be inProgress</p>
+    <br>
+    <div class="form-group row "  >
+      <div class="col-sm ">
+          <input type="text" ngModel value="value1" name="todo" class="form-control date " placeholder="New Task" >
+      </div>
+      <div class="col pr-0">
+        <input type="date" ngModel  value="value2" min="{{min}}" name="deadline" class="form-control mx-0 " placeholder="deadline" >
+    </div>
+      <div class="col pr-0">
+
+              <div class="dropdown">
+                <button  class="btn  dropdown-toggle" type="button" data-toggle="dropdown">Assigned By
+               </button>
+                <ul class="dropdown-menu">
+                  <li>Admin 1</li>
+                  <li>Admin 2</li>
+                  <li>Admin 3</li>
+                </ul>
+              </div>
+      </div>
+<div class="col">
+    <button type="submit" value="Task" class="add">Add</button>
+</div>
+
+  </div>
+<div class="fixTableHead">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">If done</th>
+        <th scope="col">Todo</th>
+        <th scope="col">Deadline</th>
+        <th scope="col">Assigned By</th>
+        <th scope="col">Status</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+     <!-- <tr *ngFor="let i of data">
+       <td>
+       <div>
+         <input type="checkbox" ngModel (click)="delTask()" name="delet" id="">
+       </div>
+       </td>
+       <td>{{i.todo}}</td>
+       <td>{{i.deadline}}</td>
+       <td>Vivek</td>
+       <td style="color: green;">completed</td>
+     </tr> -->
+
+
+     <tr>
+       <td><i class="fas fa-trash" style="color: gray;"></i></td>
+       <td>todo</td>
+       <td>ded</td>
+       <td>viv</td>
+       <td>com/pen</td>
+     </tr>
+     <tr>
+      <td><i class="fas fa-trash" style="color: gray;"></i></td>
+      <td>todo</td>
+      <td>ded</td>
+      <td>viv</td>
+      <td>com/pen</td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-trash" style="color: gray;"></i></td>
+      <td>todo</td>
+      <td>ded</td>
+      <td>viv</td>
+      <td>com/pen</td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-trash" style="color: gray;"></i></td>
+      <td>todo</td>
+      <td>ded</td>
+      <td>viv</td>
+      <td>com/pen</td>
+    </tr>
+      </tbody>
+  </table>
+</div>
+
+  </div>
+</div>
+
+
+
+

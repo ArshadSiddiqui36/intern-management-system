@@ -1,0 +1,47 @@
+
+<div class="container">
+    <br><br>
+    <h1 style="color: #ff5b64; ">Attendance Status</h1>
+    <div class="form_wrapper">
+      <div class="form_container">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Date</th>
+        <th scope="col">In-Time</th>
+        <th scope="col">Out-Time</th>
+        <th scope="col">Total hours</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <!-- <th scope="row">1</th> -->
+        <tr *ngFor="let i of index">
+            <!-- <th scope="row">1</th> -->
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.designation}}</td>
+            <td>{{change(i.morning)}}</td>
+            <td>{{changeTime(i.morning)}}</td>
+            <td>{{changeTime(i.evening)}}</td>
+            <td>{{totalHours(i.morning,i.evening)}}</td>
+
+
+        </tr>
+
+      </tbody>
+  </table>
+  </div>
+
+  <!-- <div width="200" height="200">
+    <canvas id="canvas">{{chart}}  Hello</canvas>
+  </div>
+   -->
+  
+  

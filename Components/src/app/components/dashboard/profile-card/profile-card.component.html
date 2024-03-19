@@ -1,0 +1,33 @@
+<div class="card-container">
+  <div class="card-title">
+    <h6>Profile</h6>
+  </div>
+
+  <div class="content-container">
+    <div class="top-section">
+      <!-- <img src="../../../../assets/avatar.png" alt="profile" /> -->
+      <img src={{photo}} alt="profile" />
+    </div>
+
+    <!-- <h6>John Doe</h6> -->
+    <!-- <p class="designation">Associate Software Developer</p> -->
+    <h6>{{name}}</h6>
+    <p class="designation">{{Designation}}</p>
+
+    <table>
+      <tr>
+        <td>UID :</td>
+        <td>07824</td>
+      </tr>
+      <tr>
+        <td>Email :</td>
+        <!-- <td>john.doe@gmail.com</td> -->
+        <td colspan="2">{{email}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="bottom-section">
+    <a routerLink="/profile">View More</a>
+  </div>
+</div>

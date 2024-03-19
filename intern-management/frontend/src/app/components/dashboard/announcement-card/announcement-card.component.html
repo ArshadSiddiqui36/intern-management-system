@@ -1,0 +1,42 @@
+<div class="card-container">
+  <div class="card-title">
+    <h6>Announcement</h6>
+  </div>
+
+  <div class="content-container">
+
+
+    <table *ngFor="let i of data">
+      <!-- Announcemet Date & Time -->
+      <p>{{changeDate(i.date)}}</p>
+      <!-- Announcemet Subject -->
+      <tr>
+        <th>Subject</th>
+      </tr>
+      <tr>
+        <td>{{i.annName}}</td>
+      </tr>
+
+      <!-- Announcemet Description -->
+      <tr>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>{{i.annBody}}</td>
+      </tr>
+
+      <!-- Announced By -->
+      <tr>
+        <th>Announced By</th>
+      </tr>
+      <tr>
+        <td>{{i.name}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div class="bottom-section">
+    <a href="#">View More</a>
+  </div>
+</div>

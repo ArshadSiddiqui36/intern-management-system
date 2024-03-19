@@ -1,0 +1,98 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>Add Intern/Admin</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form action="" #userForm2='ngForm' (ngSubmit)="onSubmit(userForm2.value)">
+
+
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="form-group">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" #fName='ngModel' minlength="4" name="firstName" placeholder="First Name" required
+                    class="form-control" ngModel />
+                  <div *ngIf="fName.errors && (fName.dirty || fName.touched)" class="alert-danger">
+                    <div [hidden]="!fName.errors.required"> Please enter a First name</div>
+                    <div [hidden]="!fName.errors.minlength"> Please enter atleast 4 characters</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" #lName='ngModel' name="lastName" placeholder="Last Name" required ngModel />
+                <div *ngIf="lName.errors && (lName.dirty || lName.touched)" class="alert-danger">
+                  <div [hidden]="!lName.errors.required"> Please enter a Last name</div>
+                  <div [hidden]="!lName.errors.minlength"> Please enter atleast 4 characters</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user-tie"></i></span>
+            <input type="text" #designation='ngModel' name="designation" placeholder="Designation" required ngModel />
+            <div *ngIf="designation.invalid && (designation.dirty || designation.touched)" class="alert-danger">Please
+              enter a designation</div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+            <input type="text" #phone='ngModel' minlength="10" name="phone" placeholder="Phone Number" required
+              class="form-control" ngModel />
+            <div *ngIf="phone.errors && (phone.dirty || phone.touched)" class="alert-danger">
+              <div [hidden]="!phone.errors.required"> Please enter Phone Number</div>
+              <div [hidden]="!phone.errors.minlength"> Please enter atleast 10 characters</div>
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <div class="select">
+              <select ngModel #role="ngModel" name="role">
+                <option value="Intern"> Intern
+                </option>
+                <option value="Admin"> Admin
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-location-arrow"></i></span>
+            <input type="text" #address='ngModel' name="address" placeholder="Address" required ngModel />
+            <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert-danger">Please enter address
+            </div>
+          </div>
+
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" #email='ngModel' name="email" placeholder="Email" required ngModel />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class=" alert-danger"> please enter email
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" #password='ngModel' name="password" placeholder="Password" required
+              class="form-control" ngModel />
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class=" alert-danger"> please enter
+              password
+            </div>
+          </div>
+
+          <div class="input_field radioBtn">
+            <label class="radio-inline">
+              <input type="radio" name="optradio" checked><b>Male</b>
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio"><b>Female</b>
+            </label>
+          </div>
+
+
+
+
+
+          <br>
+          <br>
+          <input class="button" type="submit" value="Add" />
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

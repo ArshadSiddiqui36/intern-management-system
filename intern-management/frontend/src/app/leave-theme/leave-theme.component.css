@@ -1,0 +1,253 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  background: #f2f2f2;
+}
+
+.form_wrapper{
+  background-color:#fff;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 5% auto 0;
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: none;
+  transition: none;
+  -webkit-animation: expand 0.8s 0.6s ease-out forwards;
+  animation: expand 0.8s 0.6s ease-out forwards;
+  opacity: 0;
+  border-radius: 20px;
+}
+
+
+.form_wrapper .title_container h1 {
+  font-size: 1.5em;
+}
+
+.form_wrapper h1 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+
+@-webkit-keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 7px;
+  }
+
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+
+@keyframes check {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
+  25% {
+    height: 0;
+    width: 7px;
+  }
+
+  50% {
+    height: 20px;
+    width: 7px;
+  }
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+    transform: scale3d(1, 1.2, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1, 0.85, 1);
+    transform: scale3d(1, 0.85, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+    transform: scale3d(1, 1.05, 1);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+@media
+only screen and (max-width: 768px),
+ (max-device-width: 1024px)  {
+
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+  .table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+  }
+  .table td{
+    padding: 12px 15px;
+    text-align: right;
+    font-size: 16px;
+  }
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Employee Name";  font-style: italic;  }
+	td:nth-of-type(2):before { content: "Leave Type";  font-style: italic; }
+	td:nth-of-type(3):before { content: "Start Date";  font-style: italic; }
+	td:nth-of-type(4):before { content: "End Date";  font-style: italic; }
+	td:nth-of-type(5):before { content: "Reason";  font-style: italic; }
+	td:nth-of-type(6):before { content: "No of Leave";  font-style: italic; }
+	td:nth-of-type(7):before { content: "Status";  font-style: italic; }
+
+}

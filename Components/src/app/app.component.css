@@ -1,0 +1,39 @@
+:host {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Montserrat, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+  font-family: Roboto, sans-serif;
+  /* font-size: 14px; */
+  /* color: #333; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header_section {
+  font-size: 16px;
+  /* position: relative; */
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.body_section {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  z-index: -10;
+  /* opacity: 0.5; */
+  /* background: #000; */
+}
+
+.chatbot {
+  position: fixed;
+  z-index: 100000;
+  bottom: 10px;
+  right: 10px;
+}

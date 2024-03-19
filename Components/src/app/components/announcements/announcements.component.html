@@ -1,0 +1,64 @@
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<form #userForm4="ngForm" (ngSubmit)="onSubmit(userForm4.value)">
+<div class="container">
+  <div class="form_wrapper">
+    <h3>Announcements</h3>
+    <br>
+    <div class="form-group row "  >
+      <div class="col-sm ">
+          <input type="text" ngModel value="value1" name="annName" class="form-control date " placeholder="Announcement Title" >
+      </div>
+      <div class="col-sm ">
+        <input type="text" ngModel value="value3" name="annBody" class="form-control date " placeholder="Announcement Body" >
+    </div>
+      <div class="col pr-0">
+        <input type="date" onfocus="(this.type='date')" ngModel  value="value2" min="{{min}}" name="date" class="form-control mx-0 " placeholder="MM/DD/YYYY" >
+    </div>
+<div class="col">
+    <button type="submit" value="Task" class="add">Add</button>
+</div>
+<br><br>
+<div class="">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+           <tr *ngFor="let i of data">
+       
+       <td>{{i.annName}}</td>
+       <td>{{i.annBody}}</td>
+       <td>{{change(i.date)}}</td>
+
+     </tr>
+
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+  </div>
+</div>
+</form>
+
+
+
+

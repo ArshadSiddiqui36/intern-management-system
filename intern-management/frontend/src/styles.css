@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+    background-image: url(
+    "./assets/background.jpg"
+    );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}

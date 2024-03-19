@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Admin SignUp</h2>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="form-group">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" #fName='ngModel' minlength="4" name="firstName" placeholder="First Name" required
+                    class="form-control" ngModel />
+                  <div *ngIf="fName.errors && (fName.dirty || fName.touched)" class="alert-danger">
+                    <div [hidden]="!fName.errors.required"> Please enter a name</div>
+                    <div [hidden]="!fName.errors.minlength"> Please enter atleast 4 characters</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="form-group">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" #lName='ngModel' name="lastName" placeholder="Last Name" required
+                    class="form-control" ngModel />
+                  <div *ngIf="lName.invalid && (lName.dirty || lName.touched)" class="alert-danger">Please enter a name
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+              <input type="email" #email='ngModel' name="email" placeholder="Email" required class="form-control"
+                ngModel />
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class=" alert-danger"> please enter email
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+              <input type="password" #password='ngModel' name="password" placeholder="Password" required
+                class="form-control" ngModel />
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class=" alert-danger"> please enter
+                password
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user-lock"></i></span>
+                <input type="password" #securityCode='ngModel' name="securityCode" placeholder="Security Code" required
+                  class="form-control" ngModel />
+                <div *ngIf="securityCode.invalid && (securityCode.dirty || securityCode.touched)" class=" alert-danger">
+                  please enter security code
+                </div>
+              </div>
+            </div>
+            <input class="button" type="submit" value="Register" />
+
+          </div>
+        </div>
+      </div>
+    </div>

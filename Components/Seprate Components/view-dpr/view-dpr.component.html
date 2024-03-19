@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="dpr_container">
+    <h1><b>Daily Progress Report</b></h1>
+    <br>
+    <div class="dpr_view" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+      <div *ngFor="let k of index">
+        <div class="dpr_date">
+          <h5>{{changeDate(k[0])}}</h5>
+        </div>
+
+        <table>
+          <thead>
+          </thead>
+
+          <tbody *ngFor="let j of k[1]">
+            <tr>
+              <td class="col_profile">
+                <img src="../../../assets/avatar.png" alt="user_avatar" alt="userProfile" />
+              </td>
+              <td class="col_name_time">
+                <span class="user_name">{{j.name}}</span>
+                <span class="dpr_time">{{changeTime(j.date)}}</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="col_dpr_btm"></td>
+              <td class="col_dpr col_dpr_btm">
+                {{j.dpr}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Loop function end here -->
+
+
+    </div>
+  </div>
+</div>

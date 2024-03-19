@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile_container {
+  /* border: 1px solid red; */
+  max-width: 500px;
+  /* height: 577px; */
+  margin: 20px auto 0 auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, #ff5b64), color-stop(18%, #ffffff));
+  background: linear-gradient(180deg, #ff5b64 18%, #ffffff 18%);
+  border-radius: 10px;
+  font-family: Montserrat, sans-serif;
+  padding: 25px;
+}
+
+.profile_container .top_section {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: left;
+  /* align-items: center; */
+}
+
+.profile_container .top_section .top_left {
+  /* border: 1px solid red; */
+  margin-right: 4%;
+}
+
+.profile_container .top_section .top_left img {
+  width: 116px;
+  height: 116px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.profile_container .top_section .top_right {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.profile_container .top_section .top_right .name_designation {
+  /* border: 1px solid red; */
+  padding: 10px 0 20px 0;
+}
+
+.profile_container .top_section .top_right .name_designation h2 {
+  /* border: 1px solid red; */
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 2px;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.profile_container .top_section .top_right .name_designation h4 {
+  /* border: 1px solid red; */
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.profile_container .top_section .top_right .edit_button {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.profile_container .top_section .top_right .edit_button a {
+  border: 1px solid #484848;
+  text-decoration: none;
+  width: 110px;
+  color: #484848;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 5px;
+  border-radius: 8px;
+  transition: .2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_container .top_section .top_right .edit_button a span.icon {
+  /* border: 1px solid red; */
+  width: 15px;
+  height: 16px;
+  background: url("../../../assets/user-edit.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px auto;
+}
+
+.profile_container .top_section .top_right .edit_button a:hover {
+  color: #ff5b64;
+  border-color: #ff5b64;
+}
+
+.profile_container .top_section .top_right .edit_button a:hover span.icon {
+  background: url("../../../assets/user-edit2.svg");
+  background-repeat: no-repeat;
+}
+
+.profile_container .bottom_section {
+  /* border: 1px solid red; */
+  margin-top: 25px;
+}
+
+.profile_container .bottom_section .tab_section {
+  border-bottom: 2px solid #484848;
+  margin-bottom: 15px;
+}
+
+.profile_container .bottom_section .tab_section h4 {
+  width: 116px;
+  background: #484848;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 4px 0 2px 0;
+  display: grid;
+  place-items: center;
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.profile_container .bottom_section .about_section {
+  padding-bottom: 8px;
+}
+
+.profile_container .bottom_section table {
+  width: 100%;
+}
+
+/* .profile_container .bottom_section table tr td {
+} */
+
+.profile_container .bottom_section table tr td:nth-child(odd) {
+  width: 115px;
+  color: #484848;
+  padding: 5px 5px 5px 0;
+}
+
+.profile_container .bottom_section table tr td:nth-child(even) {
+  color: #2e2e2e;
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+
+/* ############################################## */
+/* Media Query */
+@media (max-width:480px) {
+
+  .profile_container {
+    padding: 25px 15px;
+  }
+
+  .profile_container .top_section .top_right .name_designation {
+    /* border: 1px solid red; */
+    padding: 15px 0 25px 0;
+  }
+
+  .profile_container .top_section .top_right .name_designation h2 {
+    /* border: 1px solid red; */
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  .profile_container .top_section .top_right .name_designation h4 {
+    /* border: 1px solid red; */
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+
+  .profile_container .bottom_section .tab_section h4 {
+    font-size: 16px;
+  }
+}

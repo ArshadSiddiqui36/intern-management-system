@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* border: 1px solid red; */
+  font-family: Montserrat, sans-serif;
+  height: calc(100vh - 50px);
+  margin: auto;
+}
+
+.container .dpr_container {
+  /* border: 1px solid red; */
+  height: 86%;
+}
+
+.container .dpr_container h1 {
+  /* border: 1px solid red; */
+  font-size: 24px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+}
+
+.container .dpr_container .dpr_view {
+  /* border: 1px solid rgb(255, 91, 100, 0.8); */
+  border: 1px solid rgb(0, 0, 0, 0.4);
+  height: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+}
+
+.container .dpr_container .dpr_view .dpr_date {
+  display: grid;
+  place-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.container .dpr_container .dpr_view .dpr_date h5 {
+  font-size: 18px;
+  font-weight: 400px;
+  padding: 5px;
+  color: #484848;
+}
+
+.container .dpr_container .dpr_view table {
+  /* border: 1px solid red; */
+  margin: 10px auto;
+  width: 100%;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container .dpr_container .dpr_view table tr td {
+  /* border: 1px solid red; */
+  padding: 10px;
+  background: #fff;
+}
+
+.container .dpr_container .dpr_view table tr td.col_profile {
+  /* border: 1px solid red; */
+  width: 40px;
+  padding-bottom: 0;
+}
+
+.container .dpr_container .dpr_view table tr td.col_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container .dpr_container .dpr_view table tr td.col_name_time {
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848;
+  padding-top: 15px;
+}
+
+.container .dpr_container .dpr_view table tr td span.user_name {
+  font-weight: 500;
+  padding-right: 15px;
+}
+
+.container .dpr_container .dpr_view table tr td.col_dpr {
+  font-size: 16px;
+  color: #484848;
+  border-top: 1px solid #f1f1f1;
+  padding-bottom: 15px;
+}
+
+.container .dpr_container .dpr_view table tr td.col_dpr_btm {
+  color: #484848;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+
+/* ------Scrollbar Property------ */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  /* display: none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  /* border-left: 1px solid rgba(0, 0, 0, 0.1); */
+  background: #f1f1f1;
+  box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  /* background: #888; */
+  background: #ff5b64;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

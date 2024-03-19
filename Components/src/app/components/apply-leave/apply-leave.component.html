@@ -1,0 +1,183 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<form #userForm4="ngForm" (ngSubmit)="onSubmit(userForm4.value)">
+
+  <div class="form_wrapper">
+    <div class="main_container">
+      <div class="sub_container">
+<div style="float: right;">
+  <a (click)="toggleClass($event)" class="btnStatus" [class.active]="leaveStatus">Leave Status</a>
+</div>
+        <div class="overlay" [class.active]="leaveStatus"></div>
+      </div>
+      <div class="sub_container2" [class.active]="leaveStatus">
+        <a class="cross"  (click)="toggleClass($event)">x</a>
+        <table class="table table-hover">
+          <thead style="background-color:#ff5b64 ;">
+            <tr>
+              <th scope="col">S.no </th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Reason</th>
+              <th scope="col"> Status</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr *ngFor="let i of data">
+              <th scope="row">1</th>
+              <td>{{change(i.start)}}</td>
+              <td>{{change(i.end)}}</td>
+              <td>{{i.reason}}</td>
+              <td>{{i.status}}</td>
+            </tr> -->
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="form_container">
+
+      <br><br>
+      <div class="title_container">
+        <h1>Apply Leave</h1>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+
+          <div class="row clearfix">
+            <div class="col_half">
+
+              <h2>Leave Type</h2><br>
+              <fieldset id="group1">
+                <div class="input_field radioBtn ">
+                  <label class="radio-inline">
+                    <input type="radio" name="group1" value="value1"><b>Leave</b>
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="group1"><b>Optional</b>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="col_half">
+              <h2>Day Type</h2><br>
+              <fieldset id="group2">
+                <div class="input_field radioBtn ">
+                  <label class="radio-inline">
+                    <input type="radio" name="group2" value="value2"><b>Full</b>
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="group2" value="value2"><b>First Half</b>
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="group2" value="value2"><b>Second Half</b>
+                  </label>
+                </div>
+              </fieldset>
+
+            </div>
+          </div>
+
+          <div class="row clearfix">
+            <div class="col_half">
+              <h2>From</h2><br>
+              <fieldset>
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker1'>
+
+                    <input type='date' class="form-control" [(ngModel)]="startdate" name="startdate" (change)="status()"
+                      value="{{startdate}}" min="{{min}}" [class.active]="leaveStatus" />
+
+                  </div>
+
+                </div>
+
+
+              </fieldset>
+
+            </div>
+            <div class="col_half">
+              <h2>To</h2><br>
+              <fieldset>
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker1'>
+                    <input class="form-control" [(ngModel)]='enddate' name="enddate" (change)="oncheck()" type="date"
+                      value="{{enddate}}" min="{{min}}" [class.active]="leaveStatus" />
+
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="input-group input-title">
+            <div class="input-group-addon ">
+              <span class="input-group">Authority name</span>
+            </div>
+            <input type="text" name="" id="">
+          </div>
+          <br>
+          <div>
+            <h2>Reason</h2><br>
+            <textarea name="reason" ngModel class="textArea" cols="50" rows="5"
+              placeholder="Enter proper reason here..."></textarea>
+          </div>
+          <div class="btnSubmit">
+            <button type="submit" class="RegBtn">Register</button>
+            <span>
+              <button class="CancelBtn">Cancel</button>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

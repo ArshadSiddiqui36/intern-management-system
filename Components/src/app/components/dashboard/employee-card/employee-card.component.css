@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  min-width: 41vw;
+  height: 250px;
+  background: #fff;
+  border: 1px solid #ff5b64;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card-container .card-title {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-radius: 5px;
+  background: #ff5b64;
+}
+
+.card-container .card-title h6 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  padding: 3px 20px 4px 20px;
+}
+
+.card-container .content-container {
+  /* border: 1px solid red; */
+  height: 100%;
+  padding: 20px;
+  padding-bottom: 38px;
+  padding-top: 16px;
+}
+
+.card-container .bottom-section {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background: #f1f1f1;
+  border-top: 1px solid #c1c1c1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-container .bottom-section p {
+  font-size: 14px;
+  color: #484848;
+}
+
+.card-container .bottom-section p strong {
+  font-weight: 600;
+}
+
+.card-container .bottom-section a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ff5b64;
+  border: 1px solid #ff5b64;
+  border-radius: 5px;
+  padding: 1px 5px;
+  transition: .2s;
+}
+
+.card-container .bottom-section a:hover {
+  color: #fff;
+  background: #ff5b64;
+}
+
+/* ------------------------------------------- */
+.content-container {
+  /* border: 1px solid red; */
+  height: 100%;
+  /* overflow-y: scroll; */
+}
+
+.content-container .employee-profile {
+  /* border: 1px solid red; */
+  height: 100%;
+  overflow-y: auto;
+}
+
+.content-container .employee-profile .employee-detail {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.content-container .employee-profile .employee-detail img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.content-container .employee-profile .employee-detail .name-desig {
+  /* border: 1px solid red; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.content-container .employee-profile .employee-detail .name-desig h6 {
+  font-size: 16px;
+  line-height: 18px;
+  color: #484848;
+}
+
+.content-container .employee-profile .employee-detail .name-desig p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #484848;
+}
+
+.content-container .employee-profile .employee-detail .linkedin {
+  margin: 0 8px;
+  padding-left: 8px;
+  /* border-left: 1px solid grey; */
+}
+
+.content-container .employee-profile .employee-detail a {
+  text-decoration: none;
+  display: block;
+  border: 1px solid #0e76a8;
+  color: #0e76a8;
+  font-weight: 600;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  transition: .2s;
+}
+
+.content-container .employee-profile .employee-detail a:hover {
+  background: #0e76a8;
+  color: #fff;
+}
+
+
+
+/* ------Scrollbar Property------ */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  /* display: none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background: #f1f1f1;
+  box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  /* background: #888; */
+  background: #ff5b64;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

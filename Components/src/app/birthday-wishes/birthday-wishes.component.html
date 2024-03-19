@@ -1,0 +1,22 @@
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+<body>
+
+  <div class="card" [class.active] ='BdayCard'>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo_uJTsC5175qJnGMNpatgJEZUKE9Z9g5lkQ&usqp=CAU" alt="birthday" class="birthday">
+
+    <div class="text">
+
+      <h1>Happy Birthday!</h1>
+      <p>I hope you have a wonderful birthday</p>
+      <p class="muted">- John Doe</p>
+      <a class="cross"  (click)="toggleClass($event)">Thanks</a>
+    </div>
+
+
+    <div class="space"></div>
+  </div>
+</body>
+

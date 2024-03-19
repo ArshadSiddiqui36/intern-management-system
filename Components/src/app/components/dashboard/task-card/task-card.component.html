@@ -1,0 +1,33 @@
+<div class="card-container">
+  <div class="card-title">
+    <h6>Tasks</h6>
+  </div>
+  <form #userForm4="ngForm" >
+  <div class="content-container">
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Todo</th>
+          <th scope="col">Deadline</th>
+          <th scope="col">Assigned By</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+       <tr *ngFor="let i of data">
+         
+         <td>{{i.todo}}</td>
+         <td>{{change(i.deadline)}}</td>
+         <td>Vivek</td>
+         <td style="color: green;">completed</td>
+       </tr>
+        </tbody>
+    </table>  
+  </div>
+</form>
+  <div class="bottom-section">
+    <p>Total Tasks : <strong>{{data.length}}</strong></p>
+    <a routerLink="/interntask">View More</a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="main_container">
+  <div class="sub_container">
+    <a href="#" (click)="toggleClass($event)" [class.active]="leaveStatus">Leave Status</a>
+    <h3>Apply Leave</h3>
+
+
+    <!-- Parent Div Screen Overlay -->
+    <!-- <div class="overlay" [class.active]="leaveStatus"></div> -->
+    <div class="overlay" [class.active]="leaveStatus"></div>
+  </div>
+
+  <!-- Full Screen Overlay -->
+  <div class="overlay" [class.active]="leaveStatus"></div>
+
+  <div class="sub_container2" [class.active]="leaveStatus">
+    <a href="#" (click)="toggleClass($event)">x</a>
+    <h3>Leave Status</h3>
+
+
+  </div>
+
+</div>

@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  width: 300px;
+  height: 250px;
+  background: #fff;
+  border: 1px solid #ff5b64;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card-container .card-title {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  border-radius: 5px;
+  background: #ff5b64;
+}
+
+.card-container .card-title h6 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  padding: 3px 20px 4px 20px;
+}
+
+.card-container .content-container {
+  /* border: 1px solid red; */
+  padding: 20px;
+  padding-top: 2px;
+}
+
+.card-container .bottom-section {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background: #f1f1f1;
+  border-top: 1px solid #c1c1c1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  /* justify-content: right; */
+  justify-content: space-between;
+}
+
+.card-container .bottom-section p {
+  font-size: 14px;
+  color: #484848;
+}
+
+.card-container .bottom-section p strong {
+  font-weight: 600;
+}
+
+.card-container .bottom-section a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #ff5b64;
+  border: 1px solid #ff5b64;
+  border-radius: 5px;
+  padding: 1px 5px;
+  transition: .2s;
+}
+
+.card-container .bottom-section a:hover {
+  color: #fff;
+  background: #ff5b64;
+}
+
+/* ------------------------------------------ */
+.content-container {
+  /* border: 1px solid red; */
+  margin: 10px 0;
+  height: 95%;
+  overflow-y: auto;
+}
+
+.content-container table {
+  width: 100%;
+  font-size: 12px;
+  color: #484848;
+  margin: 10px 0 20px 0;
+}
+
+.content-container table tr td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content-container table tr th {
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content-container table tr th,
+td {
+  padding: 2px;
+  text-align: center;
+}
+
+.content-container table tr td.text-left {
+  text-align: left;
+}
+
+/* ------Scrollbar Property------ */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  /* display: none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #f1f1f1;
+  box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  /* background: #888; */
+  background: #ff5b64;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

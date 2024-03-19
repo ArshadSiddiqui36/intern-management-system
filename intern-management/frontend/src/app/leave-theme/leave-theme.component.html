@@ -1,0 +1,47 @@
+
+<div class="container">
+  <br><br>
+  <h1 style="color: #ff5b64; ">Leave Status</h1>
+  <div class="form_wrapper">
+    <div class="form_container">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Employee Name</th>
+      <!-- <th scope="col">Attendence</th> -->
+      <th scope="col">Leave Type</th>
+      <!-- <th scope="col">Day Type</th> -->
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Reason</th>
+      <th scope="col">No of Leave</th>
+      <th scope="col">Status</th>
+      <th scope="col"></th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of getControl();index as j">
+      <td>{{i.value.name}}</td>
+      <td>leave</td>
+      <td>{{change(i.value.start)}}</td>
+      <td>{{change(i.value.end)}}</td>
+      <td>{{i.value.reason}}</td>
+      <td>{{changeHours(i.value.start,i.value.end)}}</td>
+
+      <td>{{i.value.status}}</td>
+
+  <td  ><a *ngIf="i.value.status=='pending' || i.value.status=='approved'" ><i (click)="approved(j)" style="color: green;" class="fas fa-check-square"></i></a>
+    <span><a *ngIf="i.value.status=='pending' || i.value.status=='rejected'" ><i (click)="rejected(j)"style="color: red; margin-left: 10px;" class="fas fa-times-circle"></i></a></span>
+    </td>
+  </tr>
+  
+    </tbody>
+</table>
+</div>
+
+

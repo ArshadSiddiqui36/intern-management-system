@@ -1,0 +1,116 @@
+<div class="chatbot_container">
+  <div class="chat-container" [class.active]="chatOpen">
+
+    <div class="chat-section" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+
+
+
+      <div class="other-chat chat">
+        <img src="../../../assets/avatar.png" alt="profile" />
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">John Doe</span>
+            <span class="time">05:30</span>
+          </p>
+
+          <p class="chat-message">Hello, I'm John Doe.</p>
+        </div>
+      </div>
+
+
+      <div class="mine-chat chat">
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">Me</span>
+            <span class="time">05:31</span>
+          </p>
+
+          <p class="chat-message">Hello, I'm Samuel Duke.</p>
+        </div>
+        <img src="../../../assets/avatar.png" alt="profile" />
+      </div>
+
+
+      <!-- ----------------------------------- -->
+
+      <div class="other-chat chat">
+        <img src="../../../assets/avatar.png" alt="profile" />
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">John Doe</span>
+            <span class="time">05:32</span>
+          </p>
+
+          <p class="chat-message">How are you, Samuel?</p>
+        </div>
+      </div>
+
+
+      <div class="mine-chat chat">
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">Me</span>
+            <span class="time">05:33</span>
+          </p>
+
+          <p class="chat-message">I'm fine, Thank you John. And what about you?</p>
+        </div>
+        <img src="../../../assets/avatar.png" alt="profile" />
+      </div>
+
+
+
+      <div class="other-chat chat">
+        <img src="../../../assets/avatar.png" alt="profile" />
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">John Doe</span>
+            <span class="time">05:34</span>
+          </p>
+
+          <p class="chat-message">I'm good, Thanks to you. Bye the way, where are you from?</p>
+        </div>
+      </div>
+
+
+      <div class="mine-chat chat">
+        <div class="chat-area">
+          <p class="name-time">
+            <span class="name">Me</span>
+            <span class="time">05:35</span>
+          </p>
+
+          <p class="chat-message">I'm from New York, US, and you?</p>
+        </div>
+        <img src="../../../assets/avatar.png" alt="profile" />
+      </div>
+
+
+
+
+
+      <!-- ----------------------------------- -->
+
+
+
+
+
+    </div>
+
+    <div class="typing-section">
+      <form>
+        <textarea type="text" placeholder="Send a message..."></textarea>
+        <button>
+          <img src="../../../assets/send icon.svg" alt="sendIcon" />
+        </button>
+      </form>
+    </div>
+
+  </div>
+  <div class="button-container">
+    <button (click)="toggleClass($event)" [class.active]="chatOpen">
+      <img src="../../../assets/chatbot icon.svg" alt="chatIcon" class="img1" [class.active]="chatOpen" />
+      <img src="../../../assets/arrow.svg" alt="arrow" class="img2" [class.active]="chatOpen" />
+    </button>
+  </div>
+</div>

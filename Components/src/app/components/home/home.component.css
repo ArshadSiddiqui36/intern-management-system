@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home_container {
+  /* border: 1px solid red; */
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  display: grid;
+  place-items: center;
+  background: #fff;
+  padding: 0 10% 8% 10%;
+  font-family: Montserrat, sans-serif;
+}
+
+/* .home_container .heading_section {
+  border: 1px solid red;
+} */
+
+.home_container .heading_section h1 {
+  font-size: 32px;
+  color: #ff5b64;
+}
+
+.home_container .heading_section p {
+  font-size: 20px;
+  color: #484848;
+}
+
+.home_container .overview_section {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_container .info_section {
+  /* border: 1px solid red; */
+  padding-right: 5%;
+}
+
+.home_container .info_section h2 {
+  font-size: 24px;
+  color: #484848;
+}
+
+.home_container .info_section p {
+  font-size: 18px;
+  color: #484848;
+}
+
+/* .home_container .info_section ul {
+  font-size: 18px;
+  color: #ff5b62;
+  list-style-image: url("../../../assets/Right Tick Icon.png");
+  list-style-image: ;
+} */
+
+.home_container .info_section ul li {
+  list-style: none;
+  font-size: 18px;
+  color: #ff5b62;
+  padding: 5px 0;
+}
+
+.home_container .info_section ul li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../../../assets/Right-Tick-Icon.svg");
+  background-size: cover;
+}
+
+.home_container .graphic_section {
+  /* border: 1px solid red; */
+  display: grid;
+  place-items: center;
+}
+
+.home_container .graphic_section img {
+  /* border: 1px solid red; */
+  max-width: 400px;
+}
+
+/* ################################################## */
+/* Media Query */
+@media (max-width: 960px) {
+  .home_container {
+    padding: 5%;
+  }
+
+  .home_container .heading_section h1 {
+    font-size: 28px;
+  }
+
+  .home_container .heading_section p {
+    font-size: 17px;
+  }
+
+  .home_container .overview_section {
+    flex-direction: column-reverse;
+  }
+
+  .home_container .info_section {
+    padding-right: 0;
+  }
+
+  .home_container .info_section h2 {
+    font-size: 22px;
+  }
+
+  .home_container .info_section p {
+    font-size: 16px;
+    color: #484848;
+  }
+
+  .home_container .info_section ul li {
+    font-size: 18px;
+  }
+
+  .home_container .info_section ul li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+  }
+
+  .home_container .graphic_section img {
+    /* border: 1px solid red; */
+    max-width: 400px;
+    padding: 25px 0;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .home_container .graphic_section img {
+    /* border: 1px solid red; */
+    max-width: 300px;
+  }
+}

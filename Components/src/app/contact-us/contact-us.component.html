@@ -1,0 +1,95 @@
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+<section class="section-bg" data-scroll-index="7">
+    <div class="overlay pt-100 pb-100 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="contact-info">
+
+                        <h2 class="contact-title">Have Any Questions?</h2>
+                        <h4><b>Please get in touch and our expert
+                                support <br>&nbsp; team will answer all your questions.</b>
+                        </h4>
+                        <ul class="contact-info">
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>+91 12345 67890</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-at"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>gmail@example.com</h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-left">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-right">
+                                    <h4>1243 xyz, INDIA</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="contact-form">
+                        <!--Contact Form-->
+                        <form #userForm4="ngForm" (ngSubmit)="onSubmit(userForm4.value)">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" ngModel value="value1" name="name" class="form-control" id="first-name"
+                                            placeholder="Enter Your Name *" required="required">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" ngModel value="value2" name="email" class="form-control" id="email"
+                                            placeholder="Enter Your Email *" required="required">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea rows="4" ngModel value="value3" name="query" class="form-control" id="description"
+                                            placeholder="Enter Your Message *" required="required"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <!--contact button-->
+                                    <button type="submit"  value="value4" class="btn-big btn btn-bg">
+                                        Send Us <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

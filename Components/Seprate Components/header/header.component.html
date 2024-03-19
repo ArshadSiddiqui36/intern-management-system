@@ -1,0 +1,145 @@
+<!-- Navigation Bar -->
+
+<div class="header_container">
+  <header>
+    <div class="brand-menu">
+      <div class="brand">
+        <a href="#" routerLinkActive="active">
+          <img src="../../assets/IMS - logo.svg" alt="brand_logo" />
+        </a>
+      </div>
+      <div class="menu">
+        <div class="toggle" (click)="toggleClass()" [class.active]="menuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <nav [class.active]="menuOpen">
+      <div class="nav_list">
+        <!-- For Admin Pannel -->
+        <ul *ngIf="admin">
+          <li class="admin-intern-panel">
+            <h4>Admin Management Pannel</h4>
+          </li>
+        </ul>
+        <ul *ngIf="checkOne=='2'">
+          <li>
+            <a routerLink="/dashboard" routerLinkActive="active" (click)="closeMenu()">Dashboard</a>
+          </li>
+          <li>
+            <a routerLink="/courses" routerLinkActive="active" (click)="closeMenu()">Courses</a>
+          </li>
+
+          <li>
+            <a routerLink="/interntask" routerLinkActive="active" (click)="closeMenu()">Tasks</a>
+          </li>
+          <li>
+            <a routerLink="/dpr" routerLinkActive="active" (click)="closeMenu()">DPR</a>
+          </li>
+          <li>
+            <a routerLink="/attendence" routerLinkActive="active" (click)="closeMenu()">Attendance</a>
+          </li>
+          <li>
+            <a routerLink="/leave" routerLinkActive="active" (click)="closeMenu()">Leave</a>
+          </li>
+          <li>
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+          </li>
+          <li>
+            <a routerLink="/About" routerLinkActive="active" (click)="closeMenu()">About</a>
+          </li>
+        </ul>
+        <!-- For Intern Pannel -->
+        <ul *ngIf="checkOne=='0'">
+          <li class="admin-intern-panel">
+            <h4>Intern Management Panel</h4>
+          </li>
+        </ul>
+        <ul *ngIf="checkOne=='1'">
+          <li>
+            <a routerLink="/addintern" routerLinkActive="active" (click)="closeMenu()">Interns</a>
+          </li>
+          <li>
+            <a routerLink="/courses" routerLinkActive="active" (click)="closeMenu()">Courses</a>
+          </li>
+          <li>
+            <a routerLink="/interns" routerLinkActive="active" (click)="closeMenu()">Employee</a>
+          </li>
+          <li>
+            <a routerLink="/admintask" routerLinkActive="active" (click)="closeMenu()">Tasks</a>
+          </li>
+          <li>
+            <a routerLink="/viewdpr" routerLinkActive="active" (click)="closeMenu()">DPR</a>
+          </li>
+          <li>
+            <a routerLink="/viewattendence" routerLinkActive="active" (click)="closeMenu()">Attendance</a>
+          </li>
+          <li>
+            <a routerLink="/adminleave" routerLinkActive="active" (click)="closeMenu()">Leave</a>
+          </li>
+          <li>
+            <a routerLink="/addAnnouncement" routerLinkActive="active" (click)="closeMenu()">Announcement</a>
+          </li>
+          <li>
+            <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+          </li>
+          <li>
+            <a routerLink="/About" routerLinkActive="active" (click)="closeMenu()">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="user_list">
+        <!-- For Admin Pannel -->
+        <!-- Before Login -->
+        <ul *ngIf="admin" class="extra-space-admin BTN">
+          <li>
+            <a href="#" routerLinkActive="active" (click)="closeMenu()">Login</a>
+          </li>
+          <li>
+            <a href="#" class="register" routerLinkActive="active" (click)="closeMenu()">Register</a>
+          </li>
+        </ul>
+        <!-- After Login -->
+        <div *ngIf="checkTwo" class="user_profile_list">
+          <div class="user_profile extra-space-user">
+            <h6>{{name  | titlecase }}</h6>
+            <div class="profile" (click)="userToggleClass($event)">
+              <img src={{image}} alt="user_avatar" />
+            </div>
+          </div>
+          <div class="user_menu" [class.active]="userMenuOpen">
+            <span></span>
+            <ul>
+              <li>
+                <a routerLink="/profile" routerLinkActive="active" (click)="closeMenu()">Profile</a>
+              </li>
+              <li>
+                <a routerLink="/editprofile" routerLinkActive="active" (click)="closeMenu()">Edit Profile</a>
+              </li>
+              <li>
+                <a routerLink="/changepassword" routerLinkActive="active" (click)="closeMenu()">Change Password</a>
+              </li>
+              <li>
+                <a href="#" (click)="SignOut()" routerLinkActive="active" (click)="closeMenu()">Sign out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- For Intern Pannel -->
+        <ul *ngIf="!checkTwo" class="extra-space-intern BTN">
+          <li>
+            <a routerLink="/About" routerLinkActive="active" (click)="closeMenu()">About</a>
+          </li>
+          <li>
+            <a routerLink="/login" routerLinkActive="active" (click)="closeMenu()">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>

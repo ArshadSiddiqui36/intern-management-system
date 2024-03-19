@@ -1,0 +1,119 @@
+.edit_profile_container {
+  /* border: 1px solid red; */
+  max-width: 500px;
+  /* height: 500px; */
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #ff5b64), color-stop(15%, #ffffff));
+  background: linear-gradient(180deg, #ff5b64 15%, #ffffff 15%);
+  font-family: Montserrat, sans-serif;
+  padding: 25px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form .imgUploadPreview {
+  width: 116px;
+  height: 116px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+form .imgUploadPreview img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+}
+
+form .imgUploadPreview label {
+  /* border: 1px solid red; */
+  width: 116px;
+  height: 116px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  padding-top: 76%;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+form .imgUploadPreview label span {
+  width: 100%;
+  height: 35px;
+  background: #000;
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+form .imgUploadPreview input[type="file"] {
+  visibility: hidden;
+}
+
+
+/* .user_details {
+  border: 1px solid red;
+} */
+
+.user_details .rows {
+  /* border: 1px solid red; */
+  padding-top: 15px;
+}
+
+.user_details .rows label {
+  /* border: 1px solid red; */
+  width: 100px;
+  padding: 5px;
+  color: #484848;
+  font-weight: 500;
+}
+
+.user_details .rows span {
+  margin-right: 20px;
+}
+
+.user_details .rows input {
+  width: calc(100% - 100px);
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #484848;
+}
+
+.user_details .rows input[type="radio"] {
+  width: auto;
+  margin-right: 2px;
+  margin-bottom: 5px;
+}
+
+.user_details .rows button {
+  width: 100%;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  background: #ff5b64;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* ###################################################### */
+/* Media Query */
+@media(max-width:480px) {
+  .edit_profile_container {
+    padding: 25px 15px;
+  }
+}

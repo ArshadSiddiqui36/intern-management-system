@@ -1,0 +1,46 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h1>Sign In</h1>
+      <p><small>Please enter your details to sign into your account</small></p>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form action="" #userForm3='ngForm' (ngSubmit)="onSubmit(userForm3.value)">
+          <div class="input_field">
+            <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" [(ngModel)]='emails' #email='ngModel' name="email" (keyup)="CheckUser(email)"
+              placeholder="Email" required />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class=" alert-danger">
+              Please enter email
+            </div>
+            <div *ngIf="key" class="alert alert-danger m-0 p-0"> Email is not exist <span
+                class="spinner-grow spinner-grow-sm text-danger p-0 m-0 "></span>
+
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" [(ngModel)]='passwords' #password='ngModel' name="password" placeholder="Password"
+              required class="form-control" />
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class=" alert-danger">
+              Please enter password
+            </div>
+          </div>
+          <span class="check left-align">
+            <input type="checkbox">
+            <label>Remember Me</label>
+          </span>
+          <a class="right-align" (click)="forgotPassword()">Forgot Password?</a>
+          <br>
+          <br>
+          <input [disabled]="userForm3.invalid" class="button" type="submit" value="Sign in" />
+        </form>
+      </div>
+    </div>
+    <div class="title_container">
+      <p>or Sign Up using</p>
+      <img src="../../../assets/images.jfif" (click)="google()" width="150" height="20" style="height:42px; width:43px"
+        alt="">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="card-container">
+  <div class="card-title">
+    <h6>Employees</h6>
+  </div>
+
+  <div class="content-container">
+    <div class="employee-profile" >
+
+      <!-- ------------------------------ -->
+      <div class="employee-detail" *ngFor="let i of data">
+        <img src={{getPhoto(i.photo)}} alt="empProfile" />
+        <div class="name-desig">
+          <div>
+            <h6>{{i.name}}</h6>
+            <p>{{i.designation}}</p>
+          </div>
+          <div class="linkedin">
+            <a href="#">in</a>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------------------ -->
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <p>Total Employees : <strong>20</strong></p>
+    <a href="#">View More</a>
+  </div>
+</div>

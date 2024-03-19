@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+/* .container_section {
+  border: 1px solid red;
+} */
+.container {
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+
+}
+
+.card-header{
+  border-color: #ff5b64;
+  border-width: medium;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 250px;
+}
+
+
+.user {
+  display: flex;
+  margin-top: auto;
+  height: 5rem;
+}
+
+.user img {
+
+  border-radius: 50%;
+  width: 70px;
+  height: 80px;
+  margin-right: 10rem;
+
+
+}
+
+.list{
+  list-style: none;
+  /* margin: 2rem; */
+  margin-top: 0%;
+}
+.list .data{
+  padding: 0.5rem;
+  /* padding-top: 0%; */
+}
+.list i{
+  margin-right: 20px;
+  opacity: 5rem;
+  color: rgb(214, 214, 214);
+height: 5rem;
+display: flex;
+
+}
+.data{
+  display: flex;
+
+}
+
